@@ -13,8 +13,30 @@ Install [uv](https://docs.astral.sh/uv/) and make it available and on your path.
 ```bash
 # update and install
 uv sync
-uv run streamlitpkg app
+
+# run using streamlit directly
+uv run streamlit run src/streamlitpkg/app.py
+
+# or run using a custom package entrypoint
+uv run streamlitpkg run-app
 ```
+
+## Deploying to Posit Connect Cloud
+
+As of May 22, 2025, I'm unable to deploy:
+
+```
+2025-05-22T20:35:58-04:00 Your publish request with ID 725f3707-456a-4553-b4d5-0bbdf429b2bc is now being processed.
+2025-05-22T20:35:58-04:00 Loading your source code...
+2025-05-22T20:35:58-04:00 Initialized empty Git repository in /cloud/project/.git/
+2025-05-22T20:35:59-04:00 From https://github.com/shapiromatron/streamlitpkg
+2025-05-22T20:35:59-04:00  * branch            d5f82ab1b8ea75b29967865dd474a95f41f2b3fc -> FETCH_HEAD
+2025-05-22T20:35:59-04:00 HEAD is now at d5f82ab rollback to version 3.12
+2025-05-22T20:35:59-04:00 Error determining requirements: / does not appear to be a Python project, as neither `pyproject.toml` nor `setup.py` are present in the directory
+2025-05-22T20:35:59-04:00 Failed to publish content: This content's dependencies could not be resolved. Check your requirements.txt. error_id=e628b7c0-7788-4147-97be-00056e71b171
+```
+
+The `requirements.txt` includes just a single line `.`, which should resolve to `pip install .`.   This should be equivalent to installing this package in the current environment.
 
 ## Developer setup
 
