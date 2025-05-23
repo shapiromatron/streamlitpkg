@@ -1,0 +1,4 @@
+# required for Posit Connect Cloud
+
+# install this package
+-e .

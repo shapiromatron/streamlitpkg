@@ -1,6 +1,6 @@
 [project]
-name = "pyscaffold"
-authors = [{name = "My pyscaffold", email = "pyscaffold@email.com"}]
+name = "streamlitpkg"
+authors = [{name = "My streamlitpkg", email = "streamlitpkg@email.com"}]
 dynamic = ["version", "description"]
 readme = "README.md"
 requires-python = ">=3.13"
@@ -15,6 +15,7 @@ classifiers = [
 ]
 dependencies = [
   "typer",
+  "streamlit ~= 1.45.1",
 ]
 
 [project.optional-dependencies]
@@ -27,12 +28,12 @@ dev = [
 ]
 
 [project.urls]
-"Source Code" = "https://github.com/shapiromatron/pyscaffold"
-"Changelog" = "https://github.com/shapiromatron/pyscaffold/blob/main/HISTORY.md"
-"Issue Tracker" = "https://github.com/shapiromatron/pyscaffold/issues"
+"Source Code" = "https://github.com/shapiromatron/streamlitpkg"
+"Changelog" = "https://github.com/shapiromatron/streamlitpkg/blob/main/HISTORY.md"
+"Issue Tracker" = "https://github.com/shapiromatron/streamlitpkg/issues"
 
 [project.scripts]
-pyscaffold = "pyscaffold.cli:app"
+streamlitpkg = "streamlitpkg.cli:app"
 
 [build-system]
 requires = ["flit_core >=3.12,<4"]
@@ -46,7 +47,7 @@ target-version = "py313"
 select = ["F", "E", "W", "I", "UP", "S", "B", "T20", "RUF"]
 ignore = ["E501", "B904", "B007", "S308", "S113", "S314"]
 unfixable = ["F401", "F841"]
-isort.known-first-party = ["pyscaffold"]
+isort.known-first-party = ["streamlitpkg"]
 
 [tool.ruff.lint.per-file-ignores]
 "test_*.py" = ["S101", "S106"]

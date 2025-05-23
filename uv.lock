@@ -215,7 +215,7 @@ wheels = [
 ]
 
 [[package]]
-name = "pyscaffold"
+name = "streamlitpkg"
 source = { editable = "." }
 dependencies = [
     { name = "typer" },

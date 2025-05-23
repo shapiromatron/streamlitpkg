@@ -1,6 +1,6 @@
 import pytest
 
-from pyscaffold.work import bottles, super_add
+from streamlitpkg.work import bottles, super_add
 
 
 def test_bottles(capsys):
@@ -15,4 +15,4 @@ def test_super_add():
 
     # test unexpected
     with pytest.raises(TypeError):
-        super_add(2, "skunk")
+        super_add(2, "skunk")  # type: ignore
