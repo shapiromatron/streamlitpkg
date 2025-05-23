@@ -1,4 +1,4 @@
 # required for Posit Connect Cloud
 
 # install this package and all required dependencies
-/cloud/project
+-e /cloud/project
