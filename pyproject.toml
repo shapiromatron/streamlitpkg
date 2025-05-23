@@ -3,13 +3,14 @@ name = "streamlitpkg"
 authors = [{name = "My streamlitpkg", email = "streamlitpkg@email.com"}]
 dynamic = ["version", "description"]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 license = { file="LICENSE" }
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Science/Research",
   "License :: OSI Approved :: MIT License",
   "Natural Language :: English",
+  "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Private :: Do Not Upload",
 ]
@@ -41,7 +42,7 @@ build-backend = "flit_core.buildapi"
 
 [tool.ruff]
 line-length = 100
-target-version = "py313"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = ["F", "E", "W", "I", "UP", "S", "B", "T20", "RUF"]
