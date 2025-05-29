@@ -4,8 +4,6 @@ Demonstrate deploying a streamlit application nested within a Python package on 
 
 This goes one step further than the excellent Posit [guide](https://docs.posit.co/connect-cloud/how-to/python/streamlit.html) that shows a simpler single module deployment. For our use case, we have a Python package, and one module within a package is the streamlit app.
 
-We're targeting the Posit Connect Cloud instead of the Streamlit [cloud](https://streamlit.io/cloud) because using the streamlit cloud requires admin level access to streamlit in a GitHub repository, which we don't want to do.
-
 ## Quickstart
 
 Install [uv](https://docs.astral.sh/uv/) and make it available and on your path. Then:
@@ -23,7 +21,12 @@ uv run streamlitpkg run-app
 
 ## Deploying to Posit Connect Cloud
 
-Still troubleshooting deployment; see https://forum.posit.co/t/201304
+As of May 2025, a little troubleshooting was required, see https://forum.posit.co/t/201304. Here are the two edits required:
+
+1. Added a requirements.txt and manually keep synced w/ contents of `pyproject.toml`
+2. Use absolute imports (`from work import foo`) instead of relative imports (`from .work import foo`) in the streamlit application, since the entrypoint for the app is the file itself and not the package.
+
+Hopefully these nuances can be resolved in the future, documenting these findings in case they're helpful.
 
 ## Developer setup
 

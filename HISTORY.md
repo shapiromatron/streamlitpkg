@@ -1,5 +1,5 @@
 # History
 
-## v0.0.1 (2025-XX-XX)
+## v0.0.1 (2025-05-29)
 
 * Initial Release
