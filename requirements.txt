@@ -1,0 +1,2 @@
+# required for Posit Connect
+src/streamlitpkg
