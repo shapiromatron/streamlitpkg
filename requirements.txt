@@ -1,2 +1,2 @@
 # required for Posit Connect
-src/streamlitpkg
+/cloud/project/
